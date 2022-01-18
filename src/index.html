@@ -56,13 +56,13 @@
         Grid Col-1
       </div>
       <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
-        Grid Col-3
+        Grid Col-2
       </div>
       <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
-        Grid
+        Grid col-3
       </div>
       <div class="font-sans col-span-2 bg-yellow-300 w-full h-40 text-center text-xl">
-        Grid
+        Grid col-4 col-span2
       </div>
 
     </div>
@@ -72,6 +72,52 @@
   <div class="text-center mx-auto px-4 py-4">
     <h1 class="text-violet-200 text-3xl py-4">@apply to customise css</h1>
     <button class="btn btn-green px-4 py-4">Click Me!</button>
+  </div>
+</section>
+<section>
+  <div class="text-center mx-auto px-4 py-4">
+    
+    <div class="bg-white/70 text-left px-6 py-4">
+      <h1 class="text-violet-800 text-3xl text-center py-4">use @layer to change default classes</h1>
+      <p class="text-left py-4">For example, using @layer base {} to change the styling of the anchor tag
+        will override the base styles in the given utility classes</p>
+      <p>This will mean that, for example, you changed the anchor styling. ALL of the <a>anchor</a> tags will apply your new styling</p>
+      </p>
+  </div>
+  </div>
+</section>
+<section>
+  <div class="text-center mx-auto px-4 py-4">
+    
+    <div class="bg-white/70 text-left px-6 py-4">
+      <h1 class="text-violet-800 text-3xl text-center py-4">Component Directives</h1>
+      <p class="text-left py-4">When you will be repeaating something over and over again, it may
+        be useful to put all of the utility classes into a component. </p>
+        <h2 class="text-lg font-bold text-violet-700">Some examples of components that might be useful:</h2>
+        <ul>
+          <li>buttons</li>
+          <li>dropdowns</li>
+          <li>logins</li>
+          <li>modals</li>
+          <li>tabs</li>
+          <li>inputs</li>
+          <li>selects</li>
+        </ul>
+        <h2 class="text-indigo-900 text-center text-2xl">Example - button </h2>
+ 
+        <code class="block whitespace-pre text-sm font-mono bg-white/90 my-5">
+          @layer components {
+            .btn-blue {
+              @apply py-2 px-4 bg-blue-500 text-white text-center uppercase
+              rounded-md hover:bg-blue-300 hover:text-blue-900;
+            }
+        </code>
+        <div class="text-center">
+          <button class="btn-blue ">click me</button>
+        </div>
+
+      </p>
+  </div>
   </div>
 </section>
     <script src="" async defer></script>

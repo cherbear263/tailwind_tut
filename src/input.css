@@ -1,5 +1,5 @@
 /* Tailwind Utility Classes */
-@tailwind base;
+@tailwind base; /* pre-flight is inserted here with basic styles */
 @tailwind components;
 @tailwind utilities;
 
@@ -10,4 +10,21 @@
 
 .btn-green {
   @apply rounded-lg shadow-md text-white bg-green-500 hover:bg-green-700;
+}
+
+/* tailwind will move these styles inside the tailwind base styles */
+@layer base {
+  a {
+    @apply text-blue-600 underline;
+  }
+  ul {
+    @apply list-disc ml-4;
+  }
+}
+/* *********** COMPONENTS ************* */
+@layer components {
+  .btn-blue {
+    @apply py-2 px-4 bg-blue-500 text-white text-center uppercase
+    rounded-md hover:bg-blue-300 hover:text-blue-900;
+  }
 }
