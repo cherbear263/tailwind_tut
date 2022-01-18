@@ -12,20 +12,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/dist/style.css" rel="stylesheet">
   </head>
-  <body class="bg-blue-700">
+  <body class="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <header>
-      <nav>
+      <nav class="bg-pink-300">
         <div class="container">
-        <h1 class="font-arial p-0">Website Title</h1>
+        <h1 class="font-arial px-10 py-5">Learning Tailwind CSS</h1>
       </div>
       </nav>
     </header>
-    <div class="container bg-indigo-500 mx-auto px-2 text-center">
-      <h1 class="font-mono text-5xl">Tailwind course</h1>
-      <h3>Course taught by Daily Tuition on Youtube</h3>
+    <div class="container mx-auto px-2 text-center">
+      <h1 class="font-mono text-5xl py-8">Tailwind Experiments</h1>
+      <h3 class="pb-10">Learning how to use Tailwind CSS</h3>
     </div>
     <!-- Flex container -->
     <section class="container text-center mx-auto px-2 py-4">
@@ -33,16 +33,16 @@
     <div class="flex gap-8 flex-wrap py-5">
       <!-- md:flex-row means that it will display as a column until the md breakpoint. Then it will display as row -->
       <!-- the alternative option is using flex-wrap, which will do it automatically -->
-      <div class="flex-initial font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+      <div class="flex-initial font-sans bg-purple-400 w-40 h-40 text-center text-gray-200 text-xl">
         Flex 1
       </div>
-      <div class="flex-initial font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+      <div class="flex-initial font-sans bg-purple-400 w-40 h-40 text-center text-gray-200 text-xl">
         Flex 2
       </div>
-      <div class="flex-initial font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+      <div class="flex-initial font-sans bg-purple-400 w-40 h-40 text-center text-gray-200 text-xl">
         Flex 3
       </div>
-      <div class="flex-initial font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+      <div class="flex-initial font-sans bg-purple-400 w-40 h-40 text-center text-gray-200 text-xl">
         Flex 4
       </div>
       
@@ -117,6 +117,38 @@
         </div>
 
       </p>
+  </div>
+  </div>
+</section>
+<section>
+  <div class="text-center mx-auto px-4 py-4">
+    
+    <div class="bg-white/70 text-left px-6 py-4">
+      <h1 class="text-violet-800 text-3xl text-center py-4">Adding custom utility Directives</h1>
+      <p class="text-left py-4">Sometimes a utility class will not be available in Tailwind. For example, 
+        if you wanted to add 5.5rem of padding. In this case, you would create a utility directive.</p>
+        <div class="flex gap-10 flex-wrap px-5 py-5">
+          <div class="text-center">
+            <div class="relative w-40 h-40 bg-indigo-500 z-5 p-21">
+              <div class="w-40 h-40 bg-indigo-400 z-10 absolute top-2 left-2">p-21</div>
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="relative w-40 h-40 bg-indigo-500 p-21 z-5">
+              <div class="w-40 h-40 bg-indigo-400 z-10 absolute top-2 left-2 hover:p-21 hover:top-0 hover:left-0"><p class="hover:invisible">p-21 on hover</p></div>
+            </div>
+          </div>
+          <div class="max-w-xs">
+          <code class="block whitespace-pre text-sm font-mono bg-white/90 px-4 ">
+            @layer utilities {
+              .p-21 {
+                padding: 5.5rem;
+              }
+            }
+          </code>
+          </div>
+        </div>
+
   </div>
   </div>
 </section>
