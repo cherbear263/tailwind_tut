@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Tailwind CSS Course</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/dist/style.css" rel="stylesheet">
@@ -16,10 +16,64 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="container mx-auto px-2">
-      <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-400">Find Friends</button>
+    <header>
+      <nav>
+        <div class="container">
+        <h1 class="font-arial p-0">Website Title</h1>
+      </div>
+      </nav>
+    </header>
+    <div class="container bg-indigo-500 mx-auto px-2 text-center">
+      <h1 class="font-mono text-5xl">Tailwind course</h1>
+      <h3>Course taught by Daily Tuition on Youtube</h3>
+    </div>
+    <!-- Flex container -->
+    <section class="container text-center mx-auto px-2 py-4">
+      <h1 class="text-violet-200 text-3xl">Flex Box</h1>
+    <div class="flex gap-8 flex-wrap py-5">
+      <!-- md:flex-row means that it will display as a column until the md breakpoint. Then it will display as row -->
+      <!-- the alternative option is using flex-wrap, which will do it automatically -->
+      <div class="flex-initial font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+        Flex 1
+      </div>
+      <div class="flex-initial font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+        Flex 2
+      </div>
+      <div class="flex-initial font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+        Flex 3
+      </div>
+      <div class="flex-initial font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+        Flex 4
+      </div>
+      
+    </div>
+  </section>
+  <!-- Grid-columns -->
+  <section class="container text-center mx-auto px-2 py-4">
+    <h1 class="text-violet-200 text-3xl">Grid Columns</h1>
+    <div class="grid md:grid-cols-2  lg:grid-cols-3 gap-5 py-4">
+      <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
+        Grid Col-1
+      </div>
+      <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
+        Grid Col-3
+      </div>
+      <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
+        Grid
+      </div>
+      <div class="font-sans col-span-2 bg-yellow-300 w-full h-40 text-center text-xl">
+        Grid
+      </div>
 
     </div>
+
+</section>
+<section>
+  <div class="text-center mx-auto px-4 py-4">
+    <h1 class="text-violet-200 text-3xl py-4">@apply to customise css</h1>
+    <button class="btn btn-green px-4 py-4">Click Me!</button>
+  </div>
+</section>
     <script src="" async defer></script>
   </body>
 </html>
