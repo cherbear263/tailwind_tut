@@ -17,141 +17,47 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <header>
-      <nav class="bg-pink-300">
-        <div class="container">
-        <h1 class="font-arial font-bold uppercase px-10 py-5">Learning Tailwind CSS</h1>
+      <nav class="bg-slate-800">
+        <div class="container text-center md:text-left md:pl-5 lg:pl-0">
+          <h1 class="font-arial text-cyan-500 font-bold uppercase py-5">Learning Tailwind CSS</h1>
       </div>
       </nav>
-    </header>
+    
     <div class="container mx-auto px-2 text-center">
-      <h1 class="font-mono text-5xl py-8">Tailwind Experiments</h1>
+      <h1 class="font-mono text-slate-800 text-5xl py-8">Tailwind Experiments</h1>
       <h3 class="pb-10">Learning how to use Tailwind CSS</h3>
     </div>
+  </header>
     <!-- Flex container -->
     <section class="container text-center mx-auto px-2 py-4">
-      <h1 class="text-violet-200 text-3xl">Flex Box</h1>
-    <div class="flex gap-8 flex-wrap py-5">
-      <!-- md:flex-row means that it will display as a column until the md breakpoint. Then it will display as row -->
-      <!-- the alternative option is using flex-wrap, which will do it automatically -->
-      <div class="flex-initial font-sans bg-purple-400 w-40 h-40 text-center text-gray-200 text-xl">
-        Flex 1
-      </div>
-      <div class="flex-initial font-sans bg-purple-400 w-40 h-40 text-center text-gray-200 text-xl">
-        Flex 2
-      </div>
-      <div class="flex-initial font-sans bg-purple-400 w-40 h-40 text-center text-gray-200 text-xl">
-        Flex 3
-      </div>
-      <div class="flex-initial font-sans bg-purple-400 w-40 h-40 text-center text-gray-200 text-xl">
-        Flex 4
+      <h1 class="font-mono text-3xl text-slate-700 underline pb-3">
+       shadow
+      </h1>
+
+    <section class="container text-center mx-auto mb-10">
+      <div class="grid grid-cols-2 gap-6">
+        <div class="shadow-sm bg-white rounded-lg py-5">
+          shadow-sm
+        </div>
+        <div class="shadow bg-white rounded-lg py-5">
+          shadow
+        </div>
+        <div class="shadow-md bg-white rounded-lg py-5">
+          shadow-md
+        </div>
+        <div class="shadow-lg bg-white rounded-lg py-5">
+          shadow-lg
+        </div>
+        <div class="shadow-xl bg-white rounded-lg py-5">
+          shadow-xl
+        </div>
+        <div class="shadow-2xl bg-white rounded-lg">
+          shadow-2xl
+        </div>
       </div>
       
-    </div>
-  </section>
-  <!-- Grid-columns -->
-  <section class="container text-center mx-auto px-2 py-4">
-    <h1 class="text-violet-200 text-3xl">Grid Columns</h1>
-    <div class="grid md:grid-cols-2  lg:grid-cols-3 gap-5 py-4">
-      <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
-        Grid Col-1
-      </div>
-      <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
-        Grid Col-2
-      </div>
-      <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
-        Grid col-3
-      </div>
-      <div class="font-sans col-span-2 bg-yellow-300 w-full h-40 text-center text-xl">
-        Grid col-4 col-span2
-      </div>
 
-    </div>
-
-</section>
-<section class="container">
-  <div class="text-center mx-auto px-4 py-4">
-    <h1 class="text-violet-200 text-3xl py-4">@apply to customise css</h1>
-    <button class="btn btn-green px-4 py-4">Click Me!</button>
-  </div>
-</section>
-<section class="container">
-  <div class="text-center mx-auto px-4 py-4">
-    
-    <div class="bg-white/70 text-left px-6 py-4">
-      <h1 class="text-violet-800 text-3xl text-center py-4">use @layer to change default classes</h1>
-      <p class="text-left py-4">For example, using @layer base {} to change the styling of the anchor tag
-        will override the base styles in the given utility classes</p>
-      <p>This will mean that, for example, you changed the anchor styling. ALL of the <a>anchor</a> tags will apply your new styling</p>
-      </p>
-  </div>
-  </div>
-</section>
-<section class="container">
-  <div class="text-center mx-auto px-4 py-4">
-    
-    <div class="bg-white/70 text-left px-6 py-4">
-      <h1 class="text-violet-800 text-3xl text-center py-4">Component Directives</h1>
-      <p class="text-left py-4">When you will be repeaating something over and over again, it may
-        be useful to put all of the utility classes into a component. </p>
-        <h2 class="text-lg font-bold text-violet-700">Some examples of components that might be useful:</h2>
-        <ul>
-          <li>buttons</li>
-          <li>dropdowns</li>
-          <li>logins</li>
-          <li>modals</li>
-          <li>tabs</li>
-          <li>inputs</li>
-          <li>selects</li>
-        </ul>
-        <h2 class="text-indigo-900 text-center text-2xl">Example - button </h2>
- 
-        <code class="block whitespace-pre text-sm font-mono bg-white/90 my-5">
-          @layer components {
-            .btn-blue {
-              @apply py-2 px-4 bg-blue-500 text-white text-center uppercase
-              rounded-md hover:bg-blue-300 hover:text-blue-900;
-            }
-        </code>
-        <div class="text-center">
-          <button class="btn-blue ">click me</button>
-        </div>
-
-      </p>
-  </div>
-  </div>
-</section>
-<section class="container">
-  <div class="text-center mx-auto px-4 py-4">
-    
-    <div class="bg-white/70 text-left px-6 py-4">
-      <h1 class="text-violet-800 text-3xl text-center py-4">Adding custom utility Directives</h1>
-      <p class="text-left py-4">Sometimes a utility class will not be available in Tailwind. For example, 
-        if you wanted to add 5.5rem of padding. In this case, you would create a utility directive.</p>
-        <div class="flex gap-10 flex-wrap px-5 py-5">
-          <div class="text-center">
-            <div class="relative w-40 h-40 bg-indigo-500 z-5 p-21">
-              <div class="w-40 h-40 bg-indigo-400 z-10 absolute top-2 left-2">p-21</div>
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="relative w-40 h-40 bg-indigo-500 p-21 z-5">
-              <div class="w-40 h-40 bg-indigo-400 z-10 absolute top-2 left-2 hover:p-21 hover:top-0 hover:left-0"><p class="hover:invisible">p-21 on hover</p></div>
-            </div>
-          </div>
-          <div class="max-w-xs">
-          <code class="block whitespace-pre text-sm font-mono bg-white/90 px-4 ">
-            @layer utilities {
-              .p-21 {
-                padding: 5.5rem;
-              }
-            }
-          </code>
-          </div>
-        </div>
-
-  </div>
-  </div>
-</section>
+    </section>
     <script src="" async defer></script>
   </body>
 </html>
