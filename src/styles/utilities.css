@@ -1,0 +1,15 @@
+@tailwind utilities;
+
+/* *********** UTILITIES *************** */
+@tailwind utilities;
+
+@layer utilities {
+  .p-21 {
+    padding: 5.5rem;
+  }
+  @layer hover, focus {
+    .p-21 {
+      padding: 5.5rem;
+    }
+  }
+}

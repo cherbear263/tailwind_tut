@@ -1,0 +1,19 @@
+@tailwind base;
+/* create a btn class that can be reused */
+.btn {
+  @apply py-2 px-4 font-semibold;
+}
+
+.btn-green {
+  @apply rounded-lg shadow-md text-white bg-green-500 hover:bg-green-700;
+}
+
+/* tailwind will move these styles inside the tailwind base styles */
+@layer base {
+  a {
+    @apply text-blue-600 underline;
+  }
+  ul {
+    @apply list-disc ml-4;
+  }
+}

@@ -1,11 +1,8 @@
-/* Tailwind Utility Classes */
-/* when you first start this, you will need to paste
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-I have moved them so that the utilities can still be used even when a component is added */
-@tailwind base; /* pre-flight is inserted here with basic styles */
 
+/* *********** BASE ******************** */
 /* create a btn class that can be reused */
 .btn {
   @apply py-2 px-4 font-semibold;
@@ -24,16 +21,18 @@ I have moved them so that the utilities can still be used even when a component 
     @apply list-disc ml-4;
   }
 }
-@tailwind components;
+/* *********** COMPONENTS ************** */
 
-/* *********** COMPONENTS ************* */
 @layer components {
   .btn-blue {
     @apply py-2 px-4 bg-blue-500 text-white text-center uppercase
     rounded-md hover:bg-blue-300 hover:text-blue-900;
   }
+  .container {
+    max-width: 1024px;
+    margin: auto;
+  }
 }
-
 /* *********** UTILITIES *************** */
 @tailwind utilities;
 
@@ -41,7 +40,7 @@ I have moved them so that the utilities can still be used even when a component 
   .p-21 {
     padding: 5.5rem;
   }
-  @variants hover, focus {
+  @layer hover, focus {
     .p-21 {
       padding: 5.5rem;
     }
